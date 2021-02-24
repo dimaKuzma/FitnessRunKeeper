@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rCV-O3-dhq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Time View Controller-->
+        <scene sceneID="8xk-26-CN6">
+            <objects>
+                <viewController id="rCV-O3-dhq" customClass="AddTimeViewController" customModule="RunKipper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eFn-gf-3hV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZa-dk-rjp">
+                                <rect key="frame" x="0.0" y="94" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Ay6-gS-aik"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXX-UX-s27">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.71331052450981591" blue="0.0036666027607361964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WD0-wl-mZd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Готово">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="rCV-O3-dhq" eventType="touchUpInside" id="QLN-Sf-Ufu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KZa-dk-rjp" firstAttribute="leading" secondItem="svS-R6-2vm" secondAttribute="leading" id="7PE-vG-mQN"/>
+                            <constraint firstItem="LXX-UX-s27" firstAttribute="top" secondItem="svS-R6-2vm" secondAttribute="top" id="B4K-ds-t4K"/>
+                            <constraint firstItem="LXX-UX-s27" firstAttribute="leading" secondItem="svS-R6-2vm" secondAttribute="leading" id="JU2-hm-zDF"/>
+                            <constraint firstItem="KZa-dk-rjp" firstAttribute="trailing" secondItem="svS-R6-2vm" secondAttribute="trailing" id="MOV-j4-vvh"/>
+                            <constraint firstItem="KZa-dk-rjp" firstAttribute="top" secondItem="LXX-UX-s27" secondAttribute="bottom" id="efs-cb-fAO"/>
+                            <constraint firstItem="svS-R6-2vm" firstAttribute="trailing" secondItem="LXX-UX-s27" secondAttribute="trailing" id="kLo-Da-4IH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="svS-R6-2vm"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="KZa-dk-rjp" id="ELI-Hx-0e7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVB-vL-JcH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166.66666666666669" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+</document>

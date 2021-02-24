@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jNc-DE-uUh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workout View Controller-->
+        <scene sceneID="fKX-uF-sNg">
+            <objects>
+                <viewController id="jNc-DE-uUh" customClass="WorkoutViewController" customModule="RunKipper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wjf-uE-grA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O5N-aP-KTS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WorkoutTableViewCell" rowHeight="72" id="pbm-a3-jyj" customClass="WorkoutTableViewCell" customModule="RunKipper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pbm-a3-jyj" id="bGR-RJ-D0W">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="count" translatesAutoresizingMaskIntoConstraints="NO" id="3JX-1f-dqy">
+                                                    <rect key="frame" x="10" y="13.5" width="45" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="FHs-Au-003"/>
+                                                        <constraint firstAttribute="width" constant="45" id="R53-x5-pxs"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwa-Kd-9pX">
+                                                    <rect key="frame" x="69" y="13.5" width="46.5" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="км" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RY-XC-FBM">
+                                                    <rect key="frame" x="118.5" y="13.5" width="24" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 мин 3 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i59-GC-WtH">
+                                                    <rect key="frame" x="69" y="36.5" width="104" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0RY-XC-FBM" firstAttribute="leading" secondItem="Bwa-Kd-9pX" secondAttribute="trailing" constant="3" id="AfD-g1-oXx"/>
+                                                <constraint firstItem="Bwa-Kd-9pX" firstAttribute="centerY" secondItem="3JX-1f-dqy" secondAttribute="centerY" multiplier="0.7" id="F0N-yJ-3iu"/>
+                                                <constraint firstItem="Bwa-Kd-9pX" firstAttribute="leading" secondItem="3JX-1f-dqy" secondAttribute="trailing" constant="14" id="GUQ-lI-rmz"/>
+                                                <constraint firstItem="3JX-1f-dqy" firstAttribute="centerY" secondItem="bGR-RJ-D0W" secondAttribute="centerY" id="Xxy-s8-zjX"/>
+                                                <constraint firstItem="0RY-XC-FBM" firstAttribute="centerY" secondItem="Bwa-Kd-9pX" secondAttribute="centerY" id="iKU-eX-QA2"/>
+                                                <constraint firstItem="i59-GC-WtH" firstAttribute="centerY" secondItem="3JX-1f-dqy" secondAttribute="centerY" multiplier="1.3" id="loD-6e-D7s"/>
+                                                <constraint firstItem="i59-GC-WtH" firstAttribute="leading" secondItem="3JX-1f-dqy" secondAttribute="trailing" constant="14" id="o8L-5Y-kTv"/>
+                                                <constraint firstItem="3JX-1f-dqy" firstAttribute="leading" secondItem="bGR-RJ-D0W" secondAttribute="leading" constant="10" id="zbe-eg-JB7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="Bwa-Kd-9pX" id="Kf4-IE-w7n"/>
+                                            <outlet property="timeLabel" destination="i59-GC-WtH" id="yB8-LF-2JL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O5N-aP-KTS" firstAttribute="leading" secondItem="x9P-dV-Reg" secondAttribute="leading" id="4fN-Cd-c65"/>
+                            <constraint firstItem="x9P-dV-Reg" firstAttribute="trailing" secondItem="O5N-aP-KTS" secondAttribute="trailing" id="7sb-t9-9fQ"/>
+                            <constraint firstItem="O5N-aP-KTS" firstAttribute="top" secondItem="x9P-dV-Reg" secondAttribute="top" id="YdF-Pf-egf"/>
+                            <constraint firstItem="x9P-dV-Reg" firstAttribute="bottom" secondItem="O5N-aP-KTS" secondAttribute="bottom" id="tcD-fi-YJe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x9P-dV-Reg"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="O5N-aP-KTS" id="Kph-2c-F8c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Yc-Xf-CAZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="62.946428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="count" width="32" height="32"/>
+    </resources>
+</document>
